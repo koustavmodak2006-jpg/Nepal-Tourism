@@ -1,0 +1,197 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.box1 {
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+    display: grid;
+    color: white;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 40px;
+}
+
+.header > * {
+    font-size: 18px;
+}
+
+.logo     { grid-area: 1/1/2/3; }
+.h2-1     { grid-area: 1/3/2/4; }
+.h2-1 u{
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+.h2-2     { grid-area: 1/4/2/5; }
+.h2-3     { grid-area: 1/5/2/6; }
+.h2-4     { grid-area: 1/6/2/7; }
+.h2-5     { grid-area: 1/7/2/8; }
+.h2-8 {
+    grid-area: 1/8/2/9;
+    background-color: rgb(247, 72, 72);
+    padding-top: 0px;
+    width: 100px;
+    border-radius: 10%;
+    color: white;
+}
+
+.head {
+    padding-top: 10px;
+}
+
+/* ── TOPIC SECTION ── */
+.topic {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 50px;
+    color: white;
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+._1 {
+    padding-top: 100px;
+    grid-area: 1/1/2/2;
+    font-size: 25px;
+}
+
+._2 {
+    grid-area: 2/1/3/2;
+    font-size: 70px;
+    width: 600px;
+    max-width: 100%;
+}
+
+._3 {
+    grid-area: 3/1/4/2;
+    font-size: 20px;
+    width: 380px;
+    max-width: 100%;
+}
+
+._4 {
+    grid-area: 4/1/5/2;
+    width: 200px;
+    color: white;
+    height: 45px;
+    border-radius: 15%;
+    background-color: rgb(247, 72, 72);
+}
+
+._5 { grid-area: 5/1/6/2; }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ── LOCATIONS ── */
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    min-height: 54vh;
+    padding: 20px 30px;
+    justify-content: space-around;
+    gap: 20px;
+}
+.loc_tag{
+    background-color: aliceblue;
+    margin-top: 50px;
+    padding: 20px 80px;
+}
+.loc_tag>h2{
+    font-weight: 900;
+}
+
+.fw-light           { font-size: 20px; }
+.text-body-secondary{ font-size: 40px; }
+.text-center        { margin-top: 30px; }
+
+/* ── FOOTER ── */
+.footer {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ════════════════════════════════
+   TABLET  (max-width: 992px)
+════════════════════════════════ */
+@media (max-width: 992px) {
+
+    /* Header becomes a flex row that wraps */
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .logo { flex: 0 0 100%; }   /* logo on its own row */
+
+    .h2-1, .h2-2, .h2-3, .h2-4,
+    .h2-5, .h2-6, .h2-7, .h2-8 {
+        flex: 0 0 auto;
+    }
+
+    .h2-8 { width: auto; padding: 4px 12px; }
+
+    /* Topic text scales down */
+    ._2 { font-size: 48px; width: 100%; }
+    ._3 { font-size: 17px; width: 100%; }
+    ._1 { padding-top: 60px; }
+
+    .topic { padding-left: 30px; }
+
+    /* Locations stack nicely */
+    .locations { flex-direction: column; align-items: center; }
+    .text-body-secondary { font-size: 28px; }
+}
+
+/* ════════════════════════════════
+   MOBILE  (max-width: 576px)
+════════════════════════════════ */
+@media (max-width: 576px) {
+
+    /* Header: logo + hamburger-style stacked links */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .header > * { font-size: 15px; }
+    .logo { font-size: 20px; }
+
+    .h2-8 { width: 90px; font-size: 13px; }
+
+    /* Topic */
+    .topic { padding-left: 16px; padding-right: 16px; gap: 14px; }
+    ._1 { padding-top: 40px; font-size: 18px; }
+    ._2 { font-size: 32px; width: 100%; }
+    ._3 { font-size: 15px; width: 100%; }
+    ._4 { width: 160px; font-size: 14px; }
+
+    /* Locations */
+    .locations {
+        margin-top: 30px;
+        padding: 16px;
+    }
+
+    .fw-light            { font-size: 16px; }
+    .text-body-secondary { font-size: 22px; }
+    .text-center         { margin-top: 16px; }
+}
