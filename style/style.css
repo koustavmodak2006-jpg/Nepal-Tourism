@@ -172,6 +172,10 @@ a{
         padding: 16px;
         gap: 8px;
     }
+    .head a{
+        color: #ffff04;
+        font-size: 18px;
+    }
 
     .header > * { font-size: 15px; }
     .logo { font-size: 20px; }
