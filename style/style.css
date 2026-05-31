@@ -183,7 +183,7 @@ a{
     .h2-8 { width: 90px; font-size: 13px; }
 
     /* Topic */
-    .topic { padding-left: 16px; padding-right: 16px; gap: 14px; }
+    .topic { padding-left: 16px; padding-right: 16px; gap: 25px; }
     ._1 { padding-top: 40px; font-size: 18px; }
     ._2 { font-size: 32px; width: 100%; }
     ._3 { font-size: 15px; width: 100%; }
